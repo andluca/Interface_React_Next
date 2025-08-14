@@ -94,11 +94,6 @@ export default function LoginPage() {
             </button>
           </div>
           
-          <div className="text-center text-sm text-gray-600">
-            <p>Credenciais padrão:</p>
-            <p><strong>Email:</strong> admin@admin.com</p>
-            <p><strong>Senha:</strong> Admin123!</p>
-          </div>
         </form>
       </div>
     </div>

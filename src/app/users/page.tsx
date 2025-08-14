@@ -29,11 +29,11 @@ export default function UsersPage() {
   const loadUsers = async () => {
     try {
       setLoading(true);
-  const result = await apiService.getUsers();
-  setUsers(result.users || []);
+      const result = await apiService.getUsers();
+      setUsers(result.users || []);
       setError('');
     } catch (err: unknown) {
-  setError(getErrorMessage(err, 'Erro ao carregar usuários'));
+      setError(getErrorMessage(err, 'Erro ao carregar usuários'));
     } finally {
       setLoading(false);
     }
@@ -82,7 +82,6 @@ export default function UsersPage() {
       
       <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <div className="px-4 py-6 sm:px-0">
-          {/* Header */}
           <div className="mb-6">
             <div className="flex justify-between items-center">
               <div>
