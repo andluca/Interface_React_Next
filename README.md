@@ -16,6 +16,7 @@ Aplicação Front-end em Next.js (App Router) para autenticação e gestão de u
 - Node.js ≥ 18 (recomendado 18/20/22 LTS)
 - npm ≥ 9
 - Backend com endpoints de autenticação e usuários
+- Backend rodando em localhost (por padrão a API deste front aponta para localhost, onde está a api preparada)
 
 ## Instalação e execução
 
