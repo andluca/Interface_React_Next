@@ -102,7 +102,6 @@ export default function UsersPage() {
             </div>
           </div>
 
-          {/* Error Message */}
           {error && (
             <div className="mb-6 bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded relative">
               <span className="block sm:inline">{error}</span>
@@ -116,7 +115,6 @@ export default function UsersPage() {
             </div>
           )}
 
-          {/* Loading State */}
           {loading ? (
             <div className="bg-white shadow rounded-lg">
               <div className="px-4 py-5 sm:p-6">
@@ -127,7 +125,6 @@ export default function UsersPage() {
               </div>
             </div>
           ) : (
-            /* Users List */
             <UserList
               users={users}
               onEdit={handleEditUser}

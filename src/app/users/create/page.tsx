@@ -24,10 +24,9 @@ export default function CreateUserPage() {
     setError('');
 
     try {
-      // Preparar dados para envio à API
       const userData = {
         name: formData.name.trim(),
-        cpf: formData.cpf.replace(/\D/g, ''), // Remove formatação do CPF
+        cpf: formData.cpf.replace(/\D/g, ''),
         birthDate: formData.birthDate,
         ...(formData.gender && { gender: formData.gender }),
         ...(formData.email && { email: formData.email }),
@@ -37,7 +36,6 @@ export default function CreateUserPage() {
 
       await apiService.createUser(userData);
       
-      // Redirecionar para a lista de usuários após sucesso
       router.push('/users');
     } catch (err: unknown) {
       setError(getErrorMessage(err, 'Erro ao criar usuário'));
@@ -50,7 +48,6 @@ export default function CreateUserPage() {
     router.push('/users');
   };
 
-  // Loading de autenticação
   if (authLoading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -59,7 +56,6 @@ export default function CreateUserPage() {
     );
   }
 
-  // Não autenticado
   if (!isAuthenticated) {
     return null;
   }
@@ -77,7 +73,6 @@ export default function CreateUserPage() {
           </p>
         </div>
 
-        {/* Formulário */}
         <UserForm
           onSubmit={handleSubmit}
           onCancel={handleCancel}
